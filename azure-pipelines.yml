@@ -21,8 +21,8 @@ stages:
             command: 'init'
             workingDirectory: '$(def_path)'
             backendServiceArm: 'wif-connect'
-            backendAzureRmStorageAccountName: '1week'
-            backendAzureRmContainerName: 'tondu'
+            backendAzureRmStorageAccountName: 'sumitstorageaccount0003'
+            backendAzureRmContainerName: 'sumit-container'
             backendAzureRmKey: 'infra.tfstate'
 
         - task: TerraformTask@5
@@ -80,8 +80,8 @@ stages:
         - task: ManualValidation@1
           displayName: Approval
           inputs:
-            notifyUsers: 'achinta.dutta04@gmail.com'
-            approvers: 'achinta.dutta04@gmail.com'
+            notifyUsers: 'sumit.devops2025@gmail.com'
+            approvers: 'sumit.devops2025@gmail.com'
         
       - job: apply
         dependsOn: approval
@@ -94,8 +94,8 @@ stages:
             command: 'init'
             workingDirectory: '$(def_path)'
             backendServiceArm: 'wif-connect'
-            backendAzureRmStorageAccountName: '1week'
-            backendAzureRmContainerName: 'tondu'
+            backendAzureRmStorageAccountName: 'sumitstorageaccount0003'
+            backendAzureRmContainerName: 'sumit-container'
             backendAzureRmKey: 'infra.tfstate'
         - task: TerraformTask@5
           displayName: Terraform Apply
