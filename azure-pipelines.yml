@@ -20,7 +20,7 @@ stages:
             provider: 'azurerm'
             command: 'init'
             workingDirectory: '$(def_path)'
-            backendServiceArm: 'wif-connect'
+            backendServiceArm: 'sumit-service-connection'
             backendAzureRmStorageAccountName: 'sumitstorageaccount0003'
             backendAzureRmContainerName: 'sumit-container'
             backendAzureRmKey: 'infra.tfstate'
@@ -38,7 +38,7 @@ stages:
             provider: 'azurerm'
             command: 'plan'
             workingDirectory: '$(def_path)'
-            environmentServiceNameAzureRM: 'wif-connect'
+            environmentServiceNameAzureRM: 'sumit-service-connection'
 
   - stage: securityScan
     displayName: Security Scan
@@ -93,7 +93,7 @@ stages:
             provider: 'azurerm'
             command: 'init'
             workingDirectory: '$(def_path)'
-            backendServiceArm: 'wif-connect'
+            backendServiceArm: 'sumit-service-connection'
             backendAzureRmStorageAccountName: 'sumitstorageaccount0003'
             backendAzureRmContainerName: 'sumit-container'
             backendAzureRmKey: 'infra.tfstate'
@@ -103,4 +103,4 @@ stages:
             provider: 'azurerm'
             command: 'apply'
             workingDirectory: '$(def_path)'
-            environmentServiceNameAzureRM: 'wif-connect'
+            environmentServiceNameAzureRM: 'sumit-service-connection'
